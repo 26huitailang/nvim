@@ -77,5 +77,8 @@
         }
       }
     }
+  },
+  "markdownlint.config": {
+    "MD001": true
   }
 }
