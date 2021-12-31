@@ -21,11 +21,14 @@ call plug#end()
 " Set the backslash as the leader key.
 let mapleader = "\\"
 
+" recursive map, nnoremap not work
+nmap <leader>ac <Plug>(coc-codeaction)
+
 " NERDTree specific mappings.
 nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 " Map the F3 key to toggle NERDTree open and close.
 nnoremap <F3> :NERDTreeToggle<cr>
 
@@ -49,6 +52,12 @@ nnoremap <c-l> <c-w>l
 " noremap <c-down> <c-w>-
 " noremap <c-left> <c-w>>
 " noremap <c-right> <c-w><
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 " }}}
 
 " STATUS LINE ------------------------------------------------------------ {{{
@@ -105,7 +114,7 @@ set number
 set cursorline
 
 " Highlight cursor line underneath the cursor vertically.
-set cursorcolumn
+"set cursorcolumn
 
 " Set shift width to 4 spaces.
 set shiftwidth=4

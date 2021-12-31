@@ -79,6 +79,7 @@
     }
   },
   "markdownlint.config": {
-    "MD001": true
+    "MD001": true,
+    "MD013": false
   }
 }
