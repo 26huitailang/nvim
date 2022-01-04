@@ -18,6 +18,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'vim-airline/vim-airline'       
 Plug 'vim-airline/vim-airline-themes' "airline 的主题
 
+" structure
+Plug 'preservim/tagbar'
 call plug#end()
 " }}}
 
@@ -81,6 +83,8 @@ nmap <leader>+ <Plug>AirlineSelectNextTab
 " 设置切换tab的快捷键 <\> + <q> 退出当前的 tab
 nmap <leader>q :bp<cr>:bd #<cr>
 
+" tags, 展示文件机构
+nmap <F8> :TagbarToggle<CR>
 " }}}
 
 " STATUS LINE ------------------------------------------------------------ {{{
