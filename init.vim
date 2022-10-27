@@ -1,10 +1,13 @@
-" PLUGINS ---------------------------------------------------------------- {{{
+" PLUGINS ---------------------------------------------------------------- {{{{{{
+" Packer 插件管理
+lua require('plugins')
+
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
 " golang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'} 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
 
-Plug 'preservim/nerdtree' 
+Plug 'preservim/nerdtree'
 
 " Use release branch (recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -16,13 +19,13 @@ let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', '
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " airline
-Plug 'vim-airline/vim-airline'       
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes' "airline 的主题
 
 " structure
 Plug 'preservim/tagbar'
 call plug#end()
-" }}}
+" }}}}}}
 
 " MAPPINGS ---------------------------------------------------------------- {{{
 " Set the backslash as the leader key.
@@ -240,6 +243,6 @@ let g:airline_symbols.maxlinenr = 'Ml' "maxline
 let g:airline_symbols.branch = 'BR'
 let g:airline_symbols.readonly = "RO"
 let g:airline_symbols.dirty = "DT"
-let g:airline_symbols.crypt = "CR" 
+let g:airline_symbols.crypt = "CR"
 
 " }}}
