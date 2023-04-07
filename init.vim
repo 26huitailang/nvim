@@ -1,4 +1,4 @@
-" PLUGINS ---------------------------------------------------------------- {{{{{{
+" PLUGINS ---------------------------------------------------------------- {{{{{{{{{
 " Packer 插件管理
 lua require('plugins')
 
@@ -8,12 +8,13 @@ Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
 
 Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
 
 " Use release branch (recommend)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Or build from source code by using yarn: https://yarnpkg.com
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-markdownlint']  " list of CoC extensions needed
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-markdownlint', 'coc-pyright']  " list of CoC extensions needed
 
 " Markdown, If you have nodejs and yarn
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -24,6 +25,7 @@ Plug 'vim-airline/vim-airline-themes' "airline 的主题
 
 " structure
 Plug 'preservim/tagbar'
+
 call plug#end()
 " }}}}}}
 
@@ -31,6 +33,8 @@ call plug#end()
 " Set the backslash as the leader key.
 let mapleader = "\\"
 
+" easymotion
+nmap <leader> <Plug>(easymotion-prefix)
 " recursive map, nnoremap not work
 nmap <leader>ac <Plug>(coc-codeaction)
 
@@ -207,6 +211,10 @@ set hlsearch
 " Set the commands to save in history default number is 20.
 set history=1000
 
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable                     " Disable folding at startup.
+
 " Enable auto completion menu after pressing TAB.
 "set wildmenu
 " Make wildmenu behave like similar to Bash completion.
@@ -245,4 +253,4 @@ let g:airline_symbols.readonly = "RO"
 let g:airline_symbols.dirty = "DT"
 let g:airline_symbols.crypt = "CR"
 
-" }}}
+" }}}}}}
