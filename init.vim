@@ -26,6 +26,9 @@ Plug 'vim-airline/vim-airline-themes' "airline 的主题
 " structure
 Plug 'preservim/tagbar'
 
+" tokyonight theme
+Plug 'folke/tokyonight.nvim'
+
 call plug#end()
 " }}}}}}
 
@@ -252,5 +255,9 @@ let g:airline_symbols.branch = 'BR'
 let g:airline_symbols.readonly = "RO"
 let g:airline_symbols.dirty = "DT"
 let g:airline_symbols.crypt = "CR"
+
+" tokyonight
+colorscheme tokyonight-night
+let g:tokyonight_style = 'night'
 
 " }}}}}}
