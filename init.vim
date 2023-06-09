@@ -1,6 +1,7 @@
 " PLUGINS ---------------------------------------------------------------- {{{{{{{{{
 " Packer 插件管理
 lua require('plugins')
+lua require('lsp/setup')
 
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
@@ -259,5 +260,7 @@ let g:airline_symbols.crypt = "CR"
 " tokyonight
 colorscheme tokyonight-night
 let g:tokyonight_style = 'night'
+
+let g:rustfmt_autosave = 1
 
 " }}}}}}

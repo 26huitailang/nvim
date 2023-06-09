@@ -1,10 +1,15 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["pythion"],
+  "coc.preferences.formatOnSaveFiletypes": ["python", "lua", "rust"],
   "pyright.enable": true,
   "python.formatting.provider": "black",
   "pyright.organizeimports.provider": "isort",
   "pyright.testing.provider": "pytest",
   "languageserver": {
+    "rust": {
+      "command": "rust-analyzer",
+      "rootPatterns": ["Cargo.toml"],
+      "filetypes": ["rust"]
+    },
     "go": {
       "command": "gopls",
       "rootPatterns": [

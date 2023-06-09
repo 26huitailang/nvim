@@ -2,6 +2,11 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'neovim/nvim-lspconfig',
+    }
+    use {
         'ThePrimeagen/refactoring.nvim',
         requires = {
             {'nvim-lua/plenary.nvim'},
