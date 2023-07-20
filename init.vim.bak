@@ -1,38 +1,36 @@
 " PLUGINS ---------------------------------------------------------------- {{{{{{{{{
 " Packer 插件管理
-"lua require('plugins')
-"lua require('lsp/setup')
-lua require('essentials')
-lua require('lazy_nvim')
+lua require('plugins')
+lua require('lsp/setup')
 
-"call plug#begin('~/.vim/plugged')
-"Plug 'Yggdroot/indentLine'
-"" golang
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
-"
-"Plug 'preservim/nerdtree'
-"Plug 'easymotion/vim-easymotion'
-"
-"" Use release branch (recommend)
-""Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"" Or build from source code by using yarn: https://yarnpkg.com
-"Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-"let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-markdownlint', 'coc-pyright']  " list of CoC extensions needed
-"
-"" Markdown, If you have nodejs and yarn
-"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-"
-"" airline
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes' "airline 的主题
-"
-"" structure
-"Plug 'preservim/tagbar'
-"
-"" tokyonight theme
-"Plug 'folke/tokyonight.nvim'
-"
-"call plug#end()
+call plug#begin('~/.vim/plugged')
+Plug 'Yggdroot/indentLine'
+" golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
+
+Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
+
+" Use release branch (recommend)
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Or build from source code by using yarn: https://yarnpkg.com
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-markdownlint', 'coc-pyright']  " list of CoC extensions needed
+
+" Markdown, If you have nodejs and yarn
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes' "airline 的主题
+
+" structure
+Plug 'preservim/tagbar'
+
+" tokyonight theme
+Plug 'folke/tokyonight.nvim'
+
+call plug#end()
 " }}}}}}
 
 " MAPPINGS ---------------------------------------------------------------- {{{
