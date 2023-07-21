@@ -6,7 +6,6 @@ lua require('essentials')
 lua require('lazy_nvim')
 
 "call plug#begin('~/.vim/plugged')
-"Plug 'Yggdroot/indentLine'
 "" golang
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
 "
