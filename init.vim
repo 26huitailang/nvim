@@ -36,23 +36,23 @@ lua require('lazy_nvim')
 
 " MAPPINGS ---------------------------------------------------------------- {{{
 " Set the backslash as the leader key.
-let mapleader = "\\"
+" let mapleader = "\\"
 
 " easymotion
-nmap <leader> <Plug>(easymotion-prefix)
+"nmap <leader> <Plug>(easymotion-prefix)
 " recursive map, nnoremap not work
-nmap <leader>ac <Plug>(coc-codeaction)
+" nmap <leader>ac <Plug>(coc-codeaction)
 
 " NERDTree specific mappings.
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-" Map the F3 key to toggle NERDTree open and close.
-nnoremap <F3> :NERDTreeToggle<cr>
+" nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <leader>f :NERDTreeFind<CR>
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-t> :NERDTreeToggle<CR>
+" " Map the F3 key to toggle NERDTree open and close.
+" nnoremap <F3> :NERDTreeToggle<cr>
 
 " Press the space bar to type the : character in command mode.
-nnoremap <space> :
+"nnoremap <space> :
 
 " Center the cursor vertically when moving to the next word during a search.
 nnoremap n nzz
@@ -60,10 +60,10 @@ nnoremap N Nzz
 
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
 " conflict under macos
 " Resize split windows using arrow keys by pressing:
 " CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
@@ -73,49 +73,49 @@ nnoremap <c-l> <c-w>l
 " noremap <c-right> <c-w><
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gd <Plug>(coc-definition)
 "nmap <silent> gy <Plug>(coc-type-definition)
 "nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gr <Plug>(coc-references)
 
 " airline
 " 设置切换tab的快捷键 <\> + <i> 切换到第i个 tab
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
+" nmap <leader>1 <Plug>AirlineSelectTab1
+" nmap <leader>2 <Plug>AirlineSelectTab2
+" nmap <leader>3 <Plug>AirlineSelectTab3
+" nmap <leader>4 <Plug>AirlineSelectTab4
+" nmap <leader>5 <Plug>AirlineSelectTab5
+" nmap <leader>6 <Plug>AirlineSelectTab6
+" nmap <leader>7 <Plug>AirlineSelectTab7
+" nmap <leader>8 <Plug>AirlineSelectTab8
+" nmap <leader>9 <Plug>AirlineSelectTab9
 " 设置切换tab的快捷键 <\> + <-> 切换到前一个 tab
-nmap <leader>- <Plug>AirlineSelectPrevTab
+" nmap <leader>- <Plug>AirlineSelectPrevTab
 " 设置切换tab的快捷键 <\> + <+> 切换到后一个 tab
-nmap <leader>+ <Plug>AirlineSelectNextTab
+" nmap <leader>+ <Plug>AirlineSelectNextTab
 " 设置切换tab的快捷键 <\> + <q> 退出当前的 tab
-nmap <leader>q :bp<cr>:bd #<cr>
+" nmap <leader>q :bp<cr>:bd #<cr>
 
 " tags, 展示文件机构
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
 " }}}
 
 " STATUS LINE ------------------------------------------------------------ {{{
 " :help statusline
 " Clear status line when vimrc is reloaded.
-set statusline=
+" set statusline=
 
 " Status line left side.
-set statusline+=\ %F\ %M\ %Y\ %R
+" set statusline+=\ %F\ %M\ %Y\ %R
 
 " Use a divider to separate the left side from the right side.
-set statusline+=%=
+" set statusline+=%=
 
 " Status line right side.
-set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+" set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 
 " Show the status on the second to last line.
-set laststatus=2
+" set laststatus=2
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
@@ -130,7 +130,7 @@ augroup END
 " More Vimscripts code goes here.
 " nerdtree
 " 当NERDTree为剩下的唯一窗口时自动关闭
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -227,41 +227,41 @@ set nofoldenable                     " Disable folding at startup.
 
 " airline
 " 设置状态栏
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#buffer_nr_show = 0
-let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme = 'desertink'  " 主题
-let g:airline#extensions#keymap#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#buffer_idx_format = {
-       \ '0': '0 ',
-       \ '1': '1 ',
-       \ '2': '2 ',
-       \ '3': '3 ',
-       \ '4': '4 ',
-       \ '5': '5 ',
-       \ '6': '6 ',
-       \ '7': '7 ',
-       \ '8': '8 ',
-       \ '9': '9 '
-       \}
-" 修改了一些个人不喜欢的字符
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.linenr = "CL" " current line
-let g:airline_symbols.whitespace = '|'
-let g:airline_symbols.maxlinenr = 'Ml' "maxline
-let g:airline_symbols.branch = 'BR'
-let g:airline_symbols.readonly = "RO"
-let g:airline_symbols.dirty = "DT"
-let g:airline_symbols.crypt = "CR"
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#buffer_nr_show = 0
+" let g:airline#extensions#tabline#formatter = 'default'
+" let g:airline_theme = 'desertink'  " 主题
+" let g:airline#extensions#keymap#enabled = 1
+" let g:airline#extensions#tabline#buffer_idx_mode = 1
+" let g:airline#extensions#tabline#buffer_idx_format = {
+"        \ '0': '0 ',
+"        \ '1': '1 ',
+"        \ '2': '2 ',
+"        \ '3': '3 ',
+"        \ '4': '4 ',
+"        \ '5': '5 ',
+"        \ '6': '6 ',
+"        \ '7': '7 ',
+"        \ '8': '8 ',
+"        \ '9': '9 '
+"        \}
+" " 修改了一些个人不喜欢的字符
+" if !exists('g:airline_symbols')
+"     let g:airline_symbols = {}
+" endif
+" let g:airline_symbols.linenr = "CL" " current line
+" let g:airline_symbols.whitespace = '|'
+" let g:airline_symbols.maxlinenr = 'Ml' "maxline
+" let g:airline_symbols.branch = 'BR'
+" let g:airline_symbols.readonly = "RO"
+" let g:airline_symbols.dirty = "DT"
+" let g:airline_symbols.crypt = "CR"
 
 " tokyonight
-colorscheme tokyonight-night
-let g:tokyonight_style = 'night'
+" colorscheme tokyonight-night
+" let g:tokyonight_style = 'night'
 
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
 
 " }}}}}}

@@ -1,12 +1,11 @@
 return {
     {
         "akinsho/bufferline.nvim",
-        config = function()
-            require("bufferline").setup()
-        end
+        config = true,
     },
     {
         "lukas-reineke/indent-blankline.nvim",
+        config = true,
     },
     { 
         "lewis6991/gitsigns.nvim",
@@ -15,7 +14,7 @@ return {
     {
         "goolord/alpha-nvim",
         config = function()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
+            require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
         end
     },
 }
