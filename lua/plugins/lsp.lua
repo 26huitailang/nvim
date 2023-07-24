@@ -24,6 +24,7 @@ return {
             jsonls = {},
             marksman = {},
             volar = {},
+            tsserver = {},
             dockerls = {},
             docker_compose_language_service = {},
             bashls = {},
