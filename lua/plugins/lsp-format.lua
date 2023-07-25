@@ -21,6 +21,10 @@ return {
             formatCommand = "black --quiet -",
             formatStdin = true,
         }
+        local isort = {
+            formatCommand = "isort --quiet -",
+            formatStdin = true,
+        }
         require "lspconfig".efm.setup {
             init_options = { documentFormatting = true },
             settings = {
@@ -34,6 +38,7 @@ return {
                     python = {
                         require('efmls-configs.linters.flake8'),
                         require('efmls-configs.formatters.black'),
+                        isort,
                     },
                 }
             }

@@ -9,7 +9,7 @@ return {
     },
     config = function()
         -- vim.keymap.set('n', '<D-F2>', function() require('dap').terminate() end)
-        vim.keymap.set('n', '<M-F2>', function() require'dap'.disconnect({ terminateDebuggee = true }) end)
+        vim.keymap.set('n', '<F2>', function() require('dap').disconnect({ terminateDebuggee = true }) end)
         vim.keymap.set('n', '<F5>', function() require 'telescope'.extensions.dap.configurations {} end)
         vim.keymap.set('n', '<F7>', function() require('dap').step_into() end)
         vim.keymap.set('n', '<F8>', function() require('dap').step_over() end)
