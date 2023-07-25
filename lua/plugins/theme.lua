@@ -9,6 +9,9 @@ return {
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
+            require("tokyonight").setup({
+                transparent = true,
+            })
             vim.cmd[[colorscheme tokyonight-storm]]
             require('lualine').setup({
                 options = {
