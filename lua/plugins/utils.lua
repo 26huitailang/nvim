@@ -1,5 +1,21 @@
 return {
     {
+        "iamcco/markdown-preview.nvim",
+        build = "cd app && npm install",
+        ft = "markdown",
+        lazy = true,
+        keys = { { "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview" } },
+        config = function()
+            vim.g.mkdp_auto_close = true
+            vim.g.mkdp_open_to_the_world = false
+            vim.g.mkdp_open_ip = "127.0.0.1"
+            vim.g.mkdp_port = "8888"
+            vim.g.mkdp_browser = ""
+            vim.g.mkdp_echo_preview_url = true
+            vim.g.mkdp_page_title = "${name}"
+        end,
+    },
+    {
         -- 快速移动光标
         "rhysd/accelerated-jk",
         config = function()
@@ -11,9 +27,9 @@ return {
         "folke/persistence.nvim",
         config = function()
             require("persistence").setup()
-            vim.keymap.set("n","<leader>qs", [[<cmd>lua require("persistence").load()<cr>]])
-            vim.keymap.set("n","<leader>ql", [[<cmd>lua require("persistence").load({ last = true})<cr>]])
-            vim.keymap.set("n","<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]])
+            vim.keymap.set("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]])
+            vim.keymap.set("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true})<cr>]])
+            vim.keymap.set("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]])
         end
     },
     {
@@ -30,7 +46,7 @@ return {
         "folke/flash.nvim",
         config = function()
             require("flash").setup()
-            vim.keymap.set({"n","x","o"},"s",
+            vim.keymap.set({ "n", "x", "o" }, "s",
                 function()
                     require("flash").jump({
                         search = {
@@ -41,17 +57,17 @@ return {
                     })
                 end
             )
-            vim.keymap.set({"n","x","o"},"S",
+            vim.keymap.set({ "n", "x", "o" }, "S",
                 function()
                     require("flash").treesitter()
                 end
             )
-            vim.keymap.set({"o"},"r",
+            vim.keymap.set({ "o" }, "r",
                 function()
                     require("flash").remote()
                 end
             )
-            vim.keymap.set({"o","x"},"R",
+            vim.keymap.set({ "o", "x" }, "R",
                 function()
                     require("flash").treesitter_search()
                 end
@@ -77,7 +93,7 @@ return {
         },
         config = function()
             require("neo-tree").setup()
-            vim.keymap.set({"n", "v"},"<leader>e",[[<cmd>Neotree toggle<CR>]])
+            vim.keymap.set({ "n", "v" }, "<leader>e", [[<cmd>Neotree toggle<CR>]])
         end
     },
     {
