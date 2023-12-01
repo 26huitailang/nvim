@@ -52,3 +52,14 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set({ "v", "n" }, "<leader>y", "\"+y")
+
+
+-- 在退出插入模式时触发 setInputMethod 函数
+local imselect = require('imselect')
+
+vim.cmd([[
+  augroup SetInputMethod
+    autocmd!
+    autocmd InsertLeave * lua require('imselect').setInputMethod()
+  augroup END
+]])
