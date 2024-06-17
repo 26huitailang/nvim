@@ -30,7 +30,7 @@ option.mouse = "a"
 option.undofile = true
 option.undodir = vim.fn.expand('$HOME/.local/share/nvim/undo')
 option.exrc = true
-option.wrap = false
+option.wrap = true
 option.splitright = true
 
 -- Buffer Settings --
@@ -45,7 +45,7 @@ global.mapleader = " "
 -- vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
 -- vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
 
-vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>") 
+vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>")
 vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
