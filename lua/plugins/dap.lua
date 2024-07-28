@@ -6,6 +6,7 @@ return {
         "nvim-telescope/telescope-dap.nvim",
         "mfussenegger/nvim-dap-python",
         "leoluz/nvim-dap-go",
+        "nvim-neotest/nvim-nio",
     },
     config = function()
         -- vim.keymap.set('n', '<D-F2>', function() require('dap').terminate() end)
