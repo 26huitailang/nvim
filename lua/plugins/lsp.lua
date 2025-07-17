@@ -23,12 +23,12 @@ return {
             pyright = {},
             jsonls = {},
             marksman = {},
-            volar = {},
-            tsserver = {},
+            vue_ls = {},
+            ts_ls = {},
             dockerls = {},
             docker_compose_language_service = {},
             bashls = {},
-            ruff_lsp = {},
+            ruff = {},
             gopls = {},
         }
         local on_attach = function(_, bufnr)
